@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 두개의 숫자를 받아서 빼는 결과 리턴하는 함수
+      // function 키워드 사용
+      function minus1(num1, num2) {
+        return num1 - num2;
+      }
+
+      // 2. 1에서 작성했던 함수를 함수 표현식으로 변경
+      const minus2 = function (num1, num2) {
+        return num1 - num2;
+      };
+
+      // 3. 2에서 작성했던 함수를 화살표 함수로 변경
+      const minus3 = (num1, num2) => num1 - num2;
+
+      //   console.log("Q1 : ", minus1(7, 3));
+      //   console.log("Q2 : ", minus2(10, 3));
+      //   console.log("Q3 : ", minus3(5, 3));
+
+      // 4. 한개의 숫자를 인자로 받아 그 숫자가 3의 배수인지 확인하는 함수 작성
+      //    3의 배수라면 화면에 "박수" 라는 글자 출력 / 아니라면 "통과" 출력
+      function question4(num) {
+        if (num % 3 == 0) {
+          console.log("Q4 : 박수");
+        } else {
+          console.log("Q4 : 통과");
+        }
+      }
+
+      // 5. 4를 개선하여 3의 배수인 경우 "박수", 9의 배수인 경우 "박수x2", 나머지 "통과"
+      function question5(num) {
+        if (num % 3 == 0) {
+          if (num % 9 == 0) {
+            console.log("Q5 : 박수x2");
+          } else {
+            console.log("Q5 : 박수");
+          }
+        } else {
+          console.log("Q5 : 통과");
+        }
+      }
+
+      // 6. 시험 점수를 입력하면 결과를 알려주는 함수 작성
+      //    두 과목을 합해서 120점 이상이면 합격, 단 한과목이 40점 미만이면 과락으로 불합격
+      function question6(score1, score2) {
+        if (score1 > 40 && score2 > 40 && score1 + score2 > 120) {
+          console.log("Q6 : 합격");
+        } else {
+          console.log("Q6 : 불합격");
+        }
+      }
+
+      // 7. 3의 배수에서 박수를 치는게 아니라 끝자리가 3, 6, 9로 끝나는 숫자라면 "박수" 출력
+      function question7(num) {
+        let lastNum = num % 10;
+        if (lastNum == 3 || lastNum == 6 || lastNum == 9) {
+          console.log("Q7 : 박수");
+        } else {
+          console.log("Q7 : 통과");
+        }
+      }
+    </script>
+  </body>
+</html>
