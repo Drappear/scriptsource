@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <input type="radio" name="gender" id="" value="male" />
+      <label for="">남자</label>
+      <input type="radio" name="gender" id="" value="female" />
+      <label for="">여자</label>
+    </form>
+    <script>
+      // 사용자 선택값에 따라 남자, 여자 클릭 alert
+      //   const genders = document.getElementsByName("gender");
+      //   genders.forEach((gender) => {
+      //     gender.addEventListener("click", (e) => {
+      //       alert(e.target.value);
+      //     });
+      //   });
+      const genders = document.querySelector("form");
+      genders.addEventListener("click", (e) => console.log(e.target.value));
+    </script>
+  </body>
+</html>
