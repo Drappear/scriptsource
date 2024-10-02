@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div>
+        <input type="text" name="text1" id="text1" />
+      </div>
+      <!-- button 이 submit 인지 확인 : action 이 가리키는 곳으로 form의 내용 전송 -->
+      <button>제출</button>
+    </form>
+    <p id="result"></p>
+    <script>
+      // 제출 버튼 클릭 시 text에 입력한 값 가져와서 result에 출력
+      // button이 submit인 경우
+      document.querySelector("form").addEventListener("submit", (e) => {
+        // submit 중지
+        e.preventDefault();
+        // tex 요소 찾기
+        const text1 = document.querySelector("#text1");
+        // text value 가져오기
+        document.querySelector("#result").textContent = text1.value;
+      });
+
+      // button이 submit이 아닌 경우
+      //   document.querySelector("button").addEventListener("click", () => {
+      //     const text1 = document.querySelector("#text1");
+      //     // alert(text1.value);
+      //     document.querySelector("#result").textContent = text1.value;
+      //   });
+    </script>
+  </body>
+</html>
