@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form action="#" method="get">
+      <div>
+        <label>소문자 이름</label>
+        <input type="text" name="lowName" id="lowName" />
+      </div>
+      <div>
+        <label>전화번호</label>
+        <input type="tel" name="phone" id="phone" />
+      </div>
+      <button>입력완료</button>
+    </form>
+    <p id="result1"></p>
+    <p id="result2"></p> -->
+    <script>
+      // function 작성
+      const info = () => {
+        // 소문자로 이름 입력 받기
+        const userName = prompt("소문자로 이름을 입력하세요");
+        // 전화번호 입력 받기
+        const userTel = prompt("전화번호를 입력하세요(000-0000-0000)");
+        // 소문자로 입력 받은 이름 대문자로 변경 후 출력
+        document.write("대문자로 이름 변경 ", userName.toUpperCase(), "<br>");
+        // 전화번호 010-1234-5678 => 010-####-5678 출력
+        document.write(
+          "전화번호 ",
+          userTel.replace(userTel.substring(4, 8), "####")
+        );
+      };
+      info();
+
+      //   document.querySelector("button").addEventListener("click", () => {
+      //     let lowName = document.querySelector("#lowName").value;
+      //     let phone = document.querySelector("#phone").value;
+      //     document.querySelector("#result1").textContent = lowName.toUpperCase();
+      //     document.querySelector("#result2").textContent = phone.replace(
+      //       phone.substring(4, 8),
+      //       "####"
+      //     );
+      //   });
+    </script>
+  </body>
+</html>
