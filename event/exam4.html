@@ -28,13 +28,26 @@
     </nav>
     <script>
       const badge = document.querySelector(".badge");
+      const body = document.querySelector("body");
       badge.addEventListener("click", (e) => {
         if (e.target.classList.contains("bg-dark")) {
           // badge 클릭 시 bg-dark 클래스명이 있으면 bg-warning 변경
           badge.classList.replace("bg-dark", "bg-warning");
+          // 글자색 검은색, 글자 Light
+          badge.style.color = "black";
+          badge.innerHTML = "Light";
+          // body.style.backgroundColor = "white";
+          // body.style.color = "black";
+          body.classList.add("bg-dark");
         } else {
           // badge 클릭 시 bg-warning 클래스명이 있으면 bg-dark 변경
           badge.classList.replace("bg-warning", "bg-dark");
+          // 글자색 흰색, 글자 Dark
+          badge.style.color = "white";
+          badge.innerHTML = "Dark";
+          // body.style.backgroundColor = "black";
+          // body.style.color = "white";
+          body.classList.remove("bg-dark");
         }
       });
     </script>
